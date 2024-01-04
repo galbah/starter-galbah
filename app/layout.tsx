@@ -3,6 +3,7 @@ import type { Metadata } from 'next';
 import { Ubuntu } from 'next/font/google';
 import type { ReactNode } from 'react';
 
+
 // Next.js has built in support for Google Fonts.
 // https://nextjs.org/docs/app/api-reference/components/font
 const ubuntu = Ubuntu({
@@ -21,11 +22,9 @@ export default function RootLayout({ children } : { children: ReactNode }) {
   const bodyClassNames = `${ubuntu.variable} ${process.env.CSS_DEBUG}`
   return (
     <html>
-      <body className={bodyClassNames}>
-        <div id="page-grid">
           {children}
-        </div>
-      </body>
     </html>
   )
 }
+
+

@@ -1,54 +1,70 @@
-import WebsiteScreen from '@/lib/components/website-screen';
-import { COURSE_WELCOME_TEXT } from '@/lib/config';
+// import WebsiteScreen from '@/lib/components/website-screen';
+// import { COURSE_WELCOME_TEXT } from '@/lib/config';
+// import Link from 'next/link';
+'use client'
+
 import Image from 'next/image';
-import Link from 'next/link';
+import React, { useState } from 'react';
 
 export default function Home() {
-  return (
-    <WebsiteScreen>
-      <div className="grid">
-        <div className="center padding-2 text-xl">
-          <span>
-            {COURSE_WELCOME_TEXT}
-          </span>
-        </div>
-        <div className="center padding-2">
-          <Image
-            src="/huji.png"
-            alt="HUJI Logo"
+  const [isSectionVisible, setSectionVisibility] = useState(false);
+
+  const turnOnSection = () => {
+    setSectionVisibility(true);
+  };
+  return (  
+    <>
+    <body>
+        <header>
+            <h1>Adopt, Dont Shop: Why You Should Adopt a Dog</h1>
+        </header>
+    
+        <main>
+            <section>
+                <h2>1. Save a Life</h2>
+                <p>Millions of dogs are abandoned or end up in shelters every year. By adopting, you give a loving home to a dog in need and potentially save their life.</p>
+            </section>
+    
+            <section>
+                <h2>2. Reduce Overpopulation</h2>
+                <p>Adopting helps reduce the demand for bred dogs and lowers the risk of overpopulation in shelters. Its a responsible choice that contributes to the well-being of the dog community.</p>
+            </section>
+    
+            <section>
+                <h2>3. Healthier Options</h2>
+                <p>Shelter dogs are often spayed or neutered, vaccinated, and may come with a health check. This means youre more likely to adopt a healthy dog, and youll also avoid supporting unethical breeding practices.</p>
+            </section>
+    
+            <section>
+                <h2>4. Unconditional Love</h2>
+                <p>Adopted dogs are grateful for a second chance and can form incredibly strong bonds with their owners. Experience the joy of giving a loving home and receiving unconditional love in return.</p>
+            </section>
+
+            <section>
+                <button onClick={turnOnSection}>I want to adopt a dog!</button>
+            </section>
+
+            {isSectionVisible && (
+              <section className='happy-section'>
+              <p>YAY!</p>
+              <Image
+            src="/dog.jpg"
+            alt="dog photo"
             width={320}
-            height={100}
+            height={260}
             priority
           />
-        </div>
-        <div className="center padding-2">
-          <Image
-            src="/bezalel.png"
-            alt="Bezalel Logo"
-            className="item"
-            width={320}
-            height={100}
-            priority
-          />
-        </div>
-        <div>
-          <h1 className="center text-xxxl">
-            Lorem Ipsum
-          </h1>
-          <p>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit. Donec faucibus sit amet nunc nec vehicula. Fusce ornare nec nulla non imperdiet. Fusce vel sodales justo. Sed efficitur arcu lorem, at iaculis odio ultricies et. Duis rutrum urna nec elit bibendum, sed hendrerit nulla posuere. Vestibulum vestibulum, ante non tincidunt posuere, dui arcu lacinia nisl, nec rhoncus massa arcu ac ipsum. Nam congue interdum tortor, eu dignissim massa scelerisque vitae. Sed ultricies bibendum congue. Praesent non magna id ligula maximus luctus. Donec vitae nibh quis neque luctus sagittis et eget nunc. Aliquam id ullamcorper lacus. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Curabitur tempor quis dolor a lacinia.
-          </p>
-          <ul>
-            <li>Aliquam maximus tellus sed lacus venenatis, ac cursus eros mollis.</li>
-            <li>In id ante sed sem pharetra molestie et vitae arcu.</li>
-            <li>Cras pharetra turpis at pretium elementum.</li>
-            <li>Donec ultrices felis vel lectus auctor iaculis.</li>
-          </ul>
-          <p>
-            See our <Link target="_blank" href="https://github.com/digital-product-jam-2024/course/tree/main/reference">Reference Material</Link> on <Link target="_blank" href="https://github.com/digital-product-jam-2024/course/blob/main/reference/html.md">HTML</Link>, <Link target="_blank" href="https://github.com/digital-product-jam-2024/course/blob/main/reference/css.md">CSS</Link>, and <Link target="_blank" href="https://github.com/digital-product-jam-2024/course/blob/main/reference/javascript.md">JavaScript</Link>.
-          </p>
-        </div>
-      </div>
-    </WebsiteScreen>
+            </section>
+            )}
+            
+        </main>
+        
+    
+        <footer>
+            <p>Consider adopting your next furry friend and make a positive impact on their life!</p>
+        </footer>
+  
+    </body> 
+    </>   
   )
 }
