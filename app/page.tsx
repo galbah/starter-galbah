@@ -12,6 +12,11 @@ export default function Home() {
   const turnOnSection = () => {
     setSectionVisibility(true);
   };
+
+  const turnOffSection = () => {
+    setSectionVisibility(false);
+  };
+
   return (  
     <>
     <body>
@@ -47,13 +52,9 @@ export default function Home() {
             {isSectionVisible && (
               <section className='happy-section'>
               <p>YAY!</p>
-              <Image
-            src="/dog.jpg"
-            alt="dog photo"
-            width={320}
-            height={260}
-            priority
-          />
+              <Image src="/dog.jpg" alt="dog photo" width={320} height={260} priority/>
+              <br></br>
+            <button onClick={turnOffSection}>close</button>
             </section>
             )}
             
