@@ -51,13 +51,13 @@ export default function Home() {
 
             {isSectionVisible && (
               <div className='happy-section'>
-              <p>adopting sitesx</p>
+              <p>adopting sites</p>
               <br></br>
               <ul>
                 <li><a href='https://jspca.org.il/en/'>jspca</a></li>
-                <iframe src="https://jspca.org.il/en/" width="600" height="250" frameborder="0"></iframe>
+                <iframe src="https://jspca.org.il/en/" width="600" height="250"></iframe>
                 <li><a href='https://spca.co.il/adoptions/'>spca</a></li>
-                <iframe src="https://spca.co.il/adoptions/" width="600" height="250" frameborder="0"></iframe>
+                <iframe src="https://spca.co.il/adoptions/" width="600" height="250"></iframe>
               </ul>
               <br></br>
               <Image src="/dog.jpg" alt="dog photo" width={320} height={260} priority/>
