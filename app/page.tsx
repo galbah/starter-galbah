@@ -32,7 +32,7 @@ export default function Home() {
     
             <div>
                 <h2>2. Reduce Overpopulation</h2>
-                <p>Adopting helps reduce the demand for bred dogs and lowers the risk of <em>overpopulation</em> in shelters. Its a responsible choice that contributes to the well-being of the dog community.</p>
+                <p>Adopting helps reduce the demand for bred dogs and lowers the risk of overpopulation in shelters. Its a responsible choice that contributes to the well-being of the dog community.</p>
             </div>
     
             <div>
@@ -55,8 +55,11 @@ export default function Home() {
               <br></br>
               <ul>
                 <li><a href='https://jspca.org.il/en/'>jspca</a></li>
+                <br></br>
                 <iframe src="https://jspca.org.il/en/" width="600" height="250"></iframe>
+                <br></br><br></br>
                 <li><a href='https://spca.co.il/adoptions/'>spca</a></li>
+                <br></br>
                 <iframe src="https://spca.co.il/adoptions/" width="600" height="250"></iframe>
               </ul>
               <br></br>
@@ -70,7 +73,7 @@ export default function Home() {
         
     
         <footer>
-            <p>Consider adopting your next furry friend and make a positive impact on their life!</p>
+            <p><em>Consider adopting your next furry friend and make a positive impact on their life!</em></p>
         </footer>
   
     </body> 
