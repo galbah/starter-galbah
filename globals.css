@@ -5,6 +5,10 @@ body {
   background-color: #d8e9d4;
 }
 
+h1{
+  font-size: xx-large;
+}
+
 header {
   text-align: center;
   background-color: #4CAF50;
@@ -32,6 +36,7 @@ h2 {
 
 p {
   line-height: 1.6;
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
 }
 
 footer {
